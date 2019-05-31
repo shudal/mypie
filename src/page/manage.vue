@@ -20,8 +20,8 @@
                         <el-menu-item index="deployContract">部署合约</el-menu-item>
                     </el-submenu>
                     <el-submenu index="7">
-                        <template slot="title"><i class="el-icon-user-solid"></i>我的账户</template>
-                        <el-menu-item index="changePwd">修改密码</el-menu-item>
+                        <template slot="title"><i class="el-icon-s-cooperation"></i>系统管理</template>
+                        <el-menu-item index="systemManage">系统管理</el-menu-item>
                     </el-submenu>
                 </el-menu>
             </el-col>

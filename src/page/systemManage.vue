@@ -5,6 +5,15 @@
         </div>
         <div>
             <el-row style="margin-top: 20px;" >
+                <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                        <span>
+                            系统操作
+                        </span>
+                    </div>
+                    <el-button type="danger" @click="shutdown()" plain>关机</el-button>
+                    <el-button type="danger" @click="reboot" plain>重启</el-button>
+                </el-card>
                 <transition name="form-fade" mode="in-out">
                     <section class="form_contianer" >
                         <div class="manage_tip">
@@ -30,6 +39,7 @@
 
 <script>
     import {changePwd} from "../untils/user";
+    import {shutdown, reboot} from "../untils/systemManage";
     import headTop from '../components/headTop';
     export default {
         data() {
@@ -55,6 +65,26 @@
                         } else {
                             this.$message.error("出现未知错误");
                         }
+                    } else {
+                        this.$message.success("修改成功");
+                    }
+                })
+            },
+            async shutdown() {
+                shutdown().then(response => {
+                    console.log(response);
+                    if (response['data']['code'] == -1) {
+                        this.$message.error("出现未知错误");
+                    } else {
+                        this.$message.success("修改成功");
+                    }
+                })
+            },
+            async reboot() {
+                reboot().then(response => {
+                    console.log(response);
+                    if (response['data']['code'] == -1) {
+                        this.$message.error("出现未知错误");
                     } else {
                         this.$message.success("修改成功");
                     }
@@ -103,5 +133,21 @@
     .form-fade-enter, .form-fade-leave-active {
         transform: translate3d(0, -50px, 0);
         opacity: 0;
+    }
+    .text {
+        font-size: 14px;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: "";
+    }
+    .clearfix:after {
+        clear: both
+    }
+
+    .box-card {
+        width: 480px;
     }
 </style>

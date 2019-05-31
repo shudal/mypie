@@ -11,7 +11,7 @@ const register  		= r => require.ensure([], () => r(require('@/page/register')),
 const deployContract 	= r => require.ensure([], () => r(require('@/page/deployContract')),	'deployContract');
 const systemInit		= r => require.ensure([], () => r(require('@/page/systemInit')), 		'systemInit');
 const percentConfig 	= r => require.ensure([], () => r(require('@/page/percentConfig')), 	'percentConfig');
-const changePwd			= r => require.ensure([], () => r(require('@/page/changePwd')),			'changePwd');
+const systemManage	    = r => require.ensure([], () => r(require('@/page/systemManage')),			'changePwd');
 
 const speak				= r => require.ensure([], () => r(require('@/page/speak')),				'speak');
 const routes = [
@@ -35,7 +35,7 @@ const routes = [
 			{path: '/systemInit', 		component: systemInit,		meta: ['配置', '程序初始化']},
 			{path: '/percentConfig',	component: percentConfig,   meta: ['配置',	'比例配置']},
 			{path: '/speak',			component: speak,			meta: ['声嘤','说花']},
-			{path: '/changePwd',		component: changePwd,		meta: ['我的账户','修改密码']}
+			{path: '/systemManage',		component: systemManage,	meta: ['系统管理','系统管理']}
 		]
 	}
 ]
