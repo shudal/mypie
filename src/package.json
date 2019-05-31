@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0"
+  },
+  "devDependencies": {
+    "element-theme": "^2.0.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0"
+  }
+}
