@@ -20,8 +20,8 @@ export function getMainContractAddress(data) {
 
 export function saySomething(data) {
     return axios({
-        url: `${base.url}/speak/something?content=${data['content']}&vol=${data['vol']}&speed=${data['speed']}&pit=${data['pit']}&per=${data['per']}`,
-        method: 'get',
+        url: `${base.url}/speak/something`,
+        method: 'post',
         data: QS.stringify(data)
     })
 }

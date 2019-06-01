@@ -14,24 +14,6 @@
                     <el-button type="danger" @click="shutdown()" plain>关机</el-button>
                     <el-button type="danger" @click="reboot" plain>重启</el-button>
                 </el-card>
-                <transition name="form-fade" mode="in-out">
-                    <section class="form_contianer" >
-                        <div class="manage_tip">
-                        </div>
-                        <el-form :model="initForm" :rules="rules" ref="initForm">
-                            <el-form-item prop="oldPwd">
-                                <el-input placeholder="旧密码" v-model="initForm.oldPwd" show-password></el-input>
-                            </el-form-item>
-                            <el-form-item prop="newPwd">
-                                <el-input placeholder="新密码" v-model="initForm.newPwd" show-password></el-input>
-                            </el-form-item>
-
-                            <el-form-item>
-                                <el-button type="primary" @click="submitForm('initForm')" class="submit_btn">确定</el-button>
-                            </el-form-item>
-                        </el-form>
-                    </section>
-                </transition>
             </el-row>
         </div>
     </div>

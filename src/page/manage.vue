@@ -10,14 +10,12 @@
                         <el-menu-item index="speak">说一句</el-menu-item>
                     </el-submenu>
                     <el-submenu index="3">
-                        <template slot="title"><i class="el-icon-plus"></i>添加代理商</template>
-                        <el-menu-item index="addAgent">邀请好友</el-menu-item>
+                        <template slot="title"><i class="el-icon-goods"></i>快乐</template>
+                        <el-menu-item index="videoPorn">有趣</el-menu-item>
                     </el-submenu>
                     <el-submenu index="6">
                         <template slot="title"><i class="el-icon-setting"></i>配置</template>
-                        <el-menu-item index="percentConfig">比例配置</el-menu-item>
-                        <el-menu-item index="systemInit">程序初始化</el-menu-item>
-                        <el-menu-item index="deployContract">部署合约</el-menu-item>
+                        <el-menu-item index="meta">配置</el-menu-item>
                     </el-submenu>
                     <el-submenu index="7">
                         <template slot="title"><i class="el-icon-s-cooperation"></i>系统管理</template>

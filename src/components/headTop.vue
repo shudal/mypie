@@ -16,11 +16,6 @@
 </template>
 
 <script>
-	import Vue from 'vue';
-	import VueCookies from 'vue-cookies';
-	Vue.use(VueCookies);
-
-	import {delAllCookie} from "../untils/util";
 	import {baseImgPath} from '@/config/env' 
 
     export default {
@@ -36,14 +31,6 @@
     	},
 		methods: {
 			async handleCommand(command) {
-				if (command == 'home') {
-					this.$router.push('/manage');
-				} else if (command == 'signout') {
-					 this.$cookies.remove("id");
-					 this.$cookies.remove("name");
-					 this.$cookies.remove("role");
-					 this.$message.success("退出成功!");
-				}
 			}
 		}
     }
