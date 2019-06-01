@@ -23,7 +23,7 @@ public class SpeakController {
     @Autowired
     SayingService sayingService;
 
-    @GetMapping("something")
+    @PostMapping("something")
     public HashMap<String, Object> saySomething(HttpServletRequest request, HttpSession httpSession) {
         HashMap<String, Object> result = new HashMap<>();
         result.put("code", "-1");
